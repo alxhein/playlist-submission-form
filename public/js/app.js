@@ -48,8 +48,8 @@ var config = {
   
   //listen for submit event//(1)
   document
-    .getElementById('submissionform')
-    .addEventListener('submit', formSubmit);
+    .getElementById('submit')
+    .onclick = formSubmit;
   
   //Submit form(1.2)
   function formSubmit(e) {
