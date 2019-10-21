@@ -3,8 +3,9 @@ let fieldset = document.getElementById("inputfield");
 let followgate = document.getElementById("followgate");
 let followButton = document.getElementById('follow-on-spotify');
 let conditions = document.getElementById('conditions');
-//for development
-const address = 'http://localhost:8888';
+
+//for development set to http://localhost:8888
+const address = 'https://streamlineplaylists.com';
 
 // Get the hash of the url
 const hash = window.location.hash
