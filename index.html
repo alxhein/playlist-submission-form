@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./public/css/style.css" />
+  <link rel="icon" href="./public/images/Streamline Icon.png">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <title>Playlist Submission</title>
+</head>
+
+<body>
+  <form action="" method="POST" id="submissionform" autocomplete="off">
+    <h1>Playlist Submission</h1>
+    <div class="alert">Message Sent</div>
+    
+    <fieldset id='inputfield'>
+      <!-- Submission Form -->
+      <!--
+        TODO:
+        - Add Genre
+        - Verify inputs
+        - Require user to follow Spotify, Soundcloud, and Instagram
+        - Song & Artist analysis (audio features, Artist's followers / popularity)
+        - Playlist Match - compare audio analysis with playlist and return a % match
+      -->
+      <label class="" for="name">Artist Name:</label>
+      <input type="text" name="name" value="" id="name" required />
+
+      <label class="" for="email">Email:</label>
+      <input type="email" name="email" value="" id="email" required />
+
+      <label for="songtitle">Song Title:</label>
+      <input type="text" name="songtitle" value="" id="songtitle" required />
+
+      <label for="songlink">Song Spotify Link:</label>
+      <input type="text" name="songlink" value="" id="songlink" required />
+
+      <label for="playlist">Playlist:</label>
+      <select name="playlist" id="playlist" required>
+          <option value="Uptown Funk" id="uptownfunk">Uptown Funk</option>
+          <option value="Travel Vibes" id="travelvibes">Travel Vibes</option>
+          <option value="Sad Suburbians" id="sadsuburbians">Sad Suburbians</option>
+          <option value="Hype Electronic" id="hypeelectronic">Dayger / EDM Rager / Hype Electronic</option>
+      </select>
+
+      <label class="" for="comment">Comment:</label>
+      <textarea name="comment" id="comment"></textarea>
+
+      <button type="submit" sendMessage()>Submit</button>
+      </fieldset>
+
+      <fieldset id='followgate'>
+          <p>Follow my Spotify profile and playlists to submit</p>
+          <button id='follow-on-spotify'>Follow on Spotify</button>
+          <p id='conditions'>By clicking this button, you will follow Travel Vibes, Uptown Funk, Sad Suburbians, Dayger/EDM Rager and Alkii's artist profile</p>
+      </fieldset>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+  <script src="./public/js/app.js"></script>
+</body>
+
+</html>
