@@ -49,10 +49,13 @@ var config = {
   //listen for submit event//(1)
   document
     .getElementById('submit')
-    .onclick = formSubmit;
+    .onclick = formSubmit(formMessage);
   
+  //changed from formSubmit(e) to a function of formMessage that returns 
+  //a function of e
   //Submit form(1.2)
-  function formSubmit(e) {
+  function formSubmit(formMessage) {
+    return function(e){
     e.preventDefault();
     // Get Values from the DOM
     let name = document.querySelector('#name').value;
@@ -63,7 +66,8 @@ var config = {
     let comment = document.querySelector('#comment').value;
 
     //send message values
-    sendMessage(name, email, songtitle, songlink, playlist, comment);
+    //Changed so that formMessage is a parameter
+    sendMessage(name, email, songtitle, songlink, playlist, comment, formMessage);
 
     fieldset.style.display = 'none';
     followgate.style.display = 'block';
@@ -73,9 +77,11 @@ var config = {
       location.href = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
     }
   }
+  }
   
+  //Changed so that formMessage is a parameter
   //Send Message to Firebase(4)
-  function sendMessage(name, email, songtitle, songlink, playlist, comment) {
+  function sendMessage(name, email, songtitle, songlink, playlist, comment, formMessage) {
     let newFormMessage = formMessage.child(name);
     newFormMessage.set({
       name: name,
