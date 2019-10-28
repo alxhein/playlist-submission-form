@@ -72,8 +72,10 @@ var config = {
     fieldset.style.display = 'none';
     followgate.style.display = 'block';
 
+    
     //on button click, redirect to spotify
     followButton.onclick = function(){
+      //console.log(`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`);
       location.href = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
     }
   }
