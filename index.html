@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <div class='form-wrapper'>
   <form action="" method="POST" id="submissionform" autocomplete="off">
     <h1>Playlist Submission</h1>
     <div class="alert">Message Sent</div>
@@ -51,13 +52,15 @@
 
       <button type="submit" id='submit' sendMessage()>Submit</button>
       </fieldset>
-
-      <fieldset id='followgate'>
-          <p>Follow my Spotify profile and playlists to submit</p>
-          <button id='follow-on-spotify'>Follow on Spotify</button>
-          <p id='conditions'>By clicking this button, you will follow Travel Vibes, Uptown Funk, Sad Suburbians, Dayger/EDM Rager and Alkii's artist profile</p>
-      </fieldset>
   </form>
+
+  <div id='followgate'>
+    <p>Follow my Spotify profile and playlists to submit</p>
+    <button id='follow-on-spotify'>Follow on Spotify</button>
+    <p id='conditions'>By clicking this button, you will follow Travel Vibes, Uptown Funk, Sad Suburbians, Dayger/EDM Rager and Alkii's artist profile</p>
+  </div>
+
+</div>
 
   <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
   <script src="./public/js/app.js"></script>

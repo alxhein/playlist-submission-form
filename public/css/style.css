@@ -7,11 +7,10 @@
     background-color: #259feb26;
   }
   
-  form {
+  .form-wrapper {
     max-width: 400px;
     margin: 35px auto;
     border-radius: 10px;
-    /* border: 1px solid black; */
     box-shadow: 0px 0px 5px grey;
     padding: 10px 15px;
     background: rgb(255, 255, 255);
@@ -105,7 +104,7 @@
   }
   
   @media screen and (min-width: 480px) {
-    form {
+    .form-wrapper {
       max-width: 480px;
     }
   }
@@ -113,6 +112,8 @@
   #followgate{
     text-align: center;
     display: none;
+    margin-bottom: 30px;
+    border: none;
   }
 
   #follow-on-spotify{
